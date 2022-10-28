@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tailwind.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/mainCss.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper w-full h-auto px-4 md:px-12 lg:px-20">
+        <!-- Container -->
+        <div class="container mx-auto box-border">
+            <!-- Nav -->
+            <nav class="nav w-full h-auto flex justify-between items-center">
+                <!-- Logo -->
+                <article class="nav_logo-container w-28 h-20 flex justify-center items-center">
+                    <img class="nav_logo" src="images/nav/black-logo.JPG" alt="Logo" />
+                </article>
+
+                <!-- Links -->
+                <article class="nav_links-container md:w-5/12 lg:w-4/12 h-auto hidden md:flex justify-between items-center">
+                    <!-- Contact -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400" href="#">contact</a>
+
+                        <!-- Animation rect -->
+                        <div class="nav_link-rect w-11/12 h-0.5 absolute rounded-xl bg-yellow-400 mt-7 opacity-0"></div>
+                    </div>
+
+                    <!-- About -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400" href="/Public/pages/about.html">about</a>
+
+                        <!-- Animation rect -->
+                        <div class="nav_link-rect w-11/12 h-0.5 absolute rounded-xl bg-yellow-400 mt-7 opacity-0"></div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <button data-menu-open_link class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400 relative" href="#">products</button>
+
+                        <!-- Animation rect -->
+                        <div data-menu-contains_rect class="nav_link-rect hovereffect md:hidden lg:block w-11/12 h-0.5 rounded-xl bg-yellow-400 mt-7 opacity-1 absolute z-50 opacity-0"></div>
+
+                        <!-- Menu -->
+                        <article class="nav_link_inner-menu hidden absolute w-full h-auto box-border mt-8 flex flex-col items-center">
+                            <!-- Links -->
+                            <div class="nav_link_inner-menu_links-container flex flex-col items-center z-0 pt-1">
+                                <!-- Drinks -->
+                                <a class="nav_link_inner-menu_link text-white uppercase text-normal transition-color hover:text-yellow-400" href="#">drinks</a>
+
+                                <!-- Pastry -->
+                                <a class="nav_link_inner-menu_link text-white uppercase text-normal mt-2 transition-color hover:text-yellow-400" href="/Public/pages/products_pastry.html">pastry</a>
+                            </div>
+
+                            <!-- Hiding rect -->
+                            <div class="nav_link_inner-menu_link-container_hiding-rect md:hidden lg:block w-full h-full z-10 bg-black absolute"></div>
+                        </article>
+                    </div>
+                </article>
+
+                <!-- Lang buttons -->
+                <article class="nav_lang-buttons_containe md:w-2/12 lg:w-1/12 h-auto hidden md:flex justify-between items-center">
+                    <!-- En -->
+                    <div class="nav_lang-button_container">
+                        <button data-eng class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">eng</button>
+                    </div>
+
+                    <!-- Est -->
+                    <div class="nav_lang-button_container">
+                        <button data-est class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">est</button>
+                    </div>
+
+                    <!-- Rus -->
+                    <div class="nav_lang-button_container">
+                        <button data-rus class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">rus</button>
+                    </div>
+                </article>
+
+                <!-- Burger menu open button -->
+                <button class="nav_burger-menu_open-button flex flex-col items-center w-auto h-auto box-border px-2 py-2 md:hidden">
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 rounded-xl"></div>
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 mt-1 rounded-xl"></div>
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 mt-1 rounded-xl"></div>
+                </button>
+            </nav>
+
+            <!-- Burger menu -->
+            <section class="burger-menu w-full h-screen absolute inset-0 flex flex-col items-center pt-7 pb-2 px-4 box-border z-50">
+                <!-- Links -->
+                <article class="burger-menu_links-container w-full h-auto py-4 box-border">
+                    <!-- About -->
+                    <div class="burger-menu_link-container w-full h-auto flex justify-center items-center">
+                        <button data-open-about-page class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400">about</button>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="burger-menu_link-container mt-5 w-full h-auto flex justify-center items-center">
+                        <a class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="#">contact</a>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="burger-menu_link-container mt-5 w-full h-auto flex flex-col items-center">
+                        <a data-burger-link_menu class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="#">Products</a>
+
+                        <!-- Hidden menu -->
+                        <div class="burger-menu_link_menu hidden w-full h-auto flex flex-col items-center box-border py-5">
+                            <!-- Drinks -->
+                            <a class="burger-menu_hidden-menu_link uppercase text-white text-lg tracking-wider" href="#">drinks</a>
+
+                            <!-- Pastry -->
+                            <a data-open-pastry-page class="burger-menu_hidden-menu_link uppercase text-white text-lg tracking-wider mt-3">pastry</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Lang buttons -->
+                <article class="burger-menu_lang-buttons_container w-full h-auto flex justify-center items-center absolute bottom-28">
+                    <!-- En -->
+                    <div class="nav_lang-button_container">
+                        <button data-eng class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">eng</button>
+                    </div>
+
+                    <!-- Est -->
+                    <div class="nav_lang-button_container ml-2">
+                        <button data-est class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">est</button>
+                    </div>
+
+                    <!-- Rus -->
+                    <div class="nav_lang-button_container ml-2">
+                        <button data-rus class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">rus</button>
+                    </div>
+                </article>
+
+                <!-- Close button -->
+                <button class="burger-menu_close-button text-white uppercase text-2xl absolute bottom-12 transition-color hover:text-yellow-400">
+                    x
+                </button>
+            </section>
+
+            <!-- Header -->
+            <header class="header w-full h-auto pb-10 relative">
+                <!-- Content container -->
+                <section class="header_content-container w-full h-auto flex flex-col-reverse items-center md:flex-row md:justify-between mt-16 md:mt-28">
+                    <!-- Text -->
+                    <article class="header_text-container w-full h-auto mt-10 md:w-5/12">
+                        <!-- H 1 -->
+                        <div class="header_text-container_row w-full h-auto">
+                            <p class="header_h-1 text-yellow-400 text-sm md:text-xs lg:text-sm uppercase tracking-wide text-center md:text-left">welcome to prize kitchen!</p>
+                        </div>
+
+                        <!-- H 2 -->
+                        <div class="header_text-container_row w-full h-auto">
+                            <p class="header_h-2 text-white text-3xl uppercase tracking-wide text-center md:text-left md:leading-9 lg:text-5xl lg:leading-none">home made pastry and delivery across Tallinn</p>
+                        </div>
+
+                        <!-- Rect -->
+                        <div class="header_rect w-3/12 lg:w-2/12 h-0.5 bg-yellow-400 md:mt-3 lg:mt-5 rounded-lg hidden md:block"></div>
+
+                        <!-- Text -->
+                        <div class="header_text-container_row w-full h-auto mt-3 lg:mt-5">
+                            <p class="header_text text-white text-lg md:text-sm md:leading-6 text-center md:text-left lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur maxime rerum ratione veniam, culpa iusto</p>
+                        </div>
+                    </article>
+
+                    <!-- images -->
+                    <article class="header_images-container flex justify-center items-center relative">
+                        <!-- First img frame -->
+                        <div class="header_img-frame w-10/12 absolute">
+                            <!-- Img -->
+                            <img class="header_img" src="images/header/nuts_apple.png" alt="Nuts with apple" />
+                        </div>
+
+                        <!-- Second img frame -->
+                        <div class="header_img-frame w-10/12 absolute hide-frame">
+                            <!-- Img -->
+                            <img class="header_img" src="images/header/nuts_bounty.png" alt="Nuts with bounty" />
+                        </div>
+
+                        <!-- Third img frame -->
+                        <div class="header_img-frame w-10/12 absolute hide-frame">
+                            <!-- Img -->
+                            <img class="header_img" src="images/header/nuts_choc.png" alt="Nuts with choc" />
+                        </div>
+
+                        <!-- Fourth img frame -->
+                        <div class="header_img-frame w-10/12 absolute hide-frame">
+                            <!-- Img -->
+                            <img class="header_img" src="images/header/nuts_twix.png" alt="Nuts with twix" />
+                        </div>
+                    </article>
+                </section>
+            </header>
+        </div>
+    </div>
+
+    <!-- Nav script -->
+    <script src="script/navScript.js"></script>
+
+    <!-- Header script -->
+    <script src="script/headerScipt.js"></script>
+</body>
+</html>

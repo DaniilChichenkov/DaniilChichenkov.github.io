@@ -1,0 +1,513 @@
+body {
+    background-color: #000000;
+}
+
+.nav_burger-menu_open-button_rect {
+    background-color: goldenrod;
+}
+
+.nav_link {
+    font-family: "Roboto";
+}
+
+.nav_lang-button {
+    font-family: "Roboto";
+}
+
+/* Link menu open animation */
+.link_rect_appear {
+    animation-name: link_rect_appear-animation;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link_rect_appear-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link_rect_disappear {
+    animation-name: link_rect_disappear-animation;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link_rect_disappear-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Menu appear & disappear animation */
+.link-menu_appear {
+    animation-name: link-menu_appear;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link-menu_appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link-menu_disappear {
+   animation-name: link-menu_disappear;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   animation-duration: 0.5s; 
+}
+
+@keyframes link-menu_disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.burger-menu {
+    background-color: #000000;
+    left: -100%;
+}
+
+.burger-menu_slide-open_animation {
+    animation-name: burger-menu_slide-open_animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes burger-menu_slide-open_animation {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.burger-menu_slide-close_animation {
+    animation-name: burger-menu_slide-close_animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_slide-close_animation {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.burger-menu_open-animation {
+    animation-name: burger-menu_open-button_animation;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_open-button_animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.burger-menu_close-animation {
+    animation-name: burger-menu_close-button_animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_close-button_animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.burger-menu_link {
+    font-family: "Roboto";
+}
+
+.burger-menu_link-menu_appear {
+    animation-name: burger-menu_link-menu_appear-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_link-menu_appear-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.burger-menu_link-menu_disappear {
+    animation-name: burger-menu_link-menu_disappear-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes burger-menu_link-menu_disappear-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pastry_item-name {
+    font-family: "Roboto";
+}
+
+.pastry_item-desc {
+    font-family: "Montserrat";
+}
+
+.pastry_item_desc-open_btn {
+    font-family: "Roboto";
+    transition: color 0.25s;
+}
+
+.pastry_item_desc-open_btn_opened {
+    color: rgb(250 204 21);
+}
+
+.rect-animation_forwards {
+    animation-name: rectMoveAnimationForwards;
+    animation-iteration-count: 1;
+    animation-duration: 1.2s;
+}
+
+@keyframes rectMoveAnimationForwards {
+    0% {
+        margin-top: 10px;
+    }
+    100% {
+        margin-top: 335px;
+    }
+}
+
+.rect-animation_backwards {
+    animation-name: rectMoveAnimationBackwards;
+    animation-iteration-count: 1;
+    animation-duration: 1.2s;
+}
+
+@keyframes rectMoveAnimationBackwards {
+    0% {
+        margin-top: 280px;
+    }
+
+    100% {
+        margin-top: 10px;
+    }
+}
+
+.element-appear {
+    animation-name: elementAppearAnimation;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
+@keyframes elementAppearAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.element-disappear {
+    animation-name: elementDisappearAnimation;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
+@keyframes elementDisappearAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pastry_item_buy_window {
+    left: -100%;
+}
+
+/* Buy modal window animation forwards */
+.pastry_item_buy_window-animation_forwards {
+    animation-name: pastry_item_buy_window-animation_forwards;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pastry_item_buy_window-animation_forwards {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+/* Buy modal window animation backwards */
+.pastry_item_buy_window-animation_backwards {
+    animation-name: pastry_item-buy_window-animation_backwards;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pastry_item-buy_window-animation_backwards {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.pastry_item_buy-window_name {
+    font-family: "Roboto";
+}
+
+.pastry_item_buy-window_desc {
+    font-family: "Montserrat";
+}
+
+.pastry_item_buy-window_label {
+    font-family: "Roboto";
+}
+
+.pastry_item_size-button {
+    font-family: "Roboto";
+}
+
+.pastry_item_quantity-button {
+    font-family: "Roboto";
+}
+
+.pastry_item_buy-window_price {
+    font-family: "Roboto";
+}
+
+.pastry_item_buy-window_confirm-button {
+    font-family: "Roboto";
+}
+
+.selected-button {
+    transition: border-color 0.3s, color 0.3s;
+    border-color: rgb(250 204 21);
+    color: rgb(250 204 21);
+}
+
+.must-select-button {
+    transition: border-color 0.3s, color 0.3s;
+    border-color: red;
+    color: red;
+}
+
+.s-nuts {
+    transition: transform 0.3s ease-in;
+    transform: scale(1.0, 1.0);
+}
+
+.l-nuts {
+    transition: transform 0.3s ease-in;
+    transform: scale(1.1, 1.1);
+}
+
+/* Choose modal window */
+.choose-size_modal-window {
+    top: -100%;
+}
+
+.size-select_modal-window_already-open {
+    animation-name: size-select_modal-window_already-open_animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes size-select_modal-window_already-open_animation {
+    0% {
+        transform: scale(1.0, 1.0);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0);
+    }
+}
+
+.size-select_modal-window_close {
+    animation-name: size-select_modal-window_close-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes size-select_modal-window_close-animation {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0px, -50px);
+        opacity: 0;
+    }
+}
+
+.choose-size_modal-window_text {
+    font-family: "Montserrat";
+}
+
+/* About */
+.about_h-1 {
+    font-family: "Montserrat";
+}
+
+.about_h-2 {
+    font-family: "Montserrat";
+}
+
+.text_start-point {
+    transform: translate(0px, -30px);
+}
+
+.about-header_text_appear-animation {
+    animation-name: about-header_text-appear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+}
+
+@keyframes about-header_text-appear {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 30px);
+        opacity: 1;
+    }
+}
+
+.about_person-name {
+    font-family: "Roboto";
+}
+
+.about_person-desc {
+    font-family: "Montserrat";
+}
+
+.text_animation-left {
+    animation-name: text-appear_animation_from-left;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes text-appear_animation_from-left {
+    0% {
+        transform: translateX(-12vh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0vh);
+        opacity: 1;
+    }
+}
+
+.text_animation-right {
+    animation-name: text-appear_animation_from-right;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes text-appear_animation_from-right {
+    0% {
+        transform: translateX(12vw);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+
+.about_person-img_kirill {
+    background-image: url("../images/about/kirill.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about_person-img_masha {
+    background-image: url("../images/about/masha.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.invisible {
+    opacity: 0;
+}

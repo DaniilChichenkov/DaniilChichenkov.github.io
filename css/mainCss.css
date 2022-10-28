@@ -1,0 +1,287 @@
+body {
+    background-color: #000000;
+}
+
+.nav_burger-menu_open-button_rect {
+    background-color: goldenrod;
+}
+
+.nav_link {
+    font-family: "Roboto";
+}
+
+.nav_lang-button {
+    font-family: "Roboto";
+}
+
+/* Link menu open animation */
+.link_rect_appear {
+    animation-name: link_rect_appear-animation;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link_rect_appear-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link_rect_disappear {
+    animation-name: link_rect_disappear-animation;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link_rect_disappear-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Menu appear & disappear animation */
+.link-menu_appear {
+    animation-name: link-menu_appear;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link-menu_appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link-menu_disappear {
+   animation-name: link-menu_disappear;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   animation-duration: 0.5s; 
+}
+
+@keyframes link-menu_disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.burger-menu {
+    background-color: #000000;
+    left: -100%;
+}
+
+.burger-menu_slide-open_animation {
+    animation-name: burger-menu_slide-open_animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes burger-menu_slide-open_animation {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.burger-menu_slide-close_animation {
+    animation-name: burger-menu_slide-close_animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_slide-close_animation {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.burger-menu_open-animation {
+    animation-name: burger-menu_open-button_animation;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_open-button_animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.burger-menu_close-animation {
+    animation-name: burger-menu_close-button_animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_close-button_animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.burger-menu_link {
+    font-family: "Roboto";
+}
+
+.burger-menu_link-menu_appear {
+    animation-name: burger-menu_link-menu_appear-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes burger-menu_link-menu_appear-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.burger-menu_link-menu_disappear {
+    animation-name: burger-menu_link-menu_disappear-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes burger-menu_link-menu_disappear-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Header */
+.header_images-container {
+    min-height: 200px;
+}
+
+.hide-frame {
+    animation-name: frame_disappear-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+}
+
+@keyframes frame_disappear-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.show-frame {
+    animation-name: frame_appear-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+}
+
+@keyframes frame_appear-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header img container for s-phones */
+@media screen and (min-width: 0px) {
+    .header_images-container {
+        width: 100%;
+        min-height: 220px;
+    }
+}
+
+/* Header img container for m-phones */
+@media screen and (min-width: 375px) {
+    .header_images-container {
+        width: 80%;
+        min-height: 240px;
+    }
+}
+
+/* Header img container for l-phones */
+@media screen and (min-width: 425px) {
+    .header_images-container {
+        width: 65%;
+        min-height: 250px;
+    }
+}
+
+/* Header img container for tablets */
+@media screen and (min-width: 768px) {
+    .header_images-container {
+        width: 40%;
+        min-height: 270px;
+    }
+}
+
+/* Header img container for laptops */
+@media screen and (min-width: 1024px) {
+    .header_images-container {
+        width: 40%;
+        min-height: 300px;
+    }
+}
+
+.header_h-1 {
+    font-family: "Montserrat";
+}
+
+.header_h-2 {
+    font-family: "Montserrat";
+}
+
+.header_text {
+    font-family: "Montserrat";
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/tailwind.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/mainStyle.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper w-full h-auto px-4 md:px-12 lg:px-20 overflow-hidden">
+        <!-- Content container -->
+        <div class="container mx-auto box-border">
+            <!-- Nav -->
+            <nav class="nav w-full h-auto flex justify-between items-center">
+                <!-- Logo -->
+                <article class="nav_logo-container w-28 h-20 flex justify-center items-center">
+                    <img class="nav_logo" src="images/nav/black-logo.JPG" alt="Logo" />
+                </article>
+
+                <!-- Links -->
+                <article class="nav_links-container md:w-5/12 lg:w-4/12 h-auto hidden md:flex justify-between items-center">
+                    <!-- Contact -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400" href="#">contact</a>
+
+                        <!-- Animation rect -->
+                        <div class="nav_link-rect w-11/12 h-0.5 absolute rounded-xl bg-yellow-400 mt-7 opacity-0"></div>
+                    </div>
+
+                    <!-- About -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400" href="#">about</a>
+
+                        <!-- Animation rect -->
+                        <div class="nav_link-rect w-11/12 h-0.5 absolute rounded-xl bg-yellow-400 mt-7 opacity-0"></div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a data-menu-open_link class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400 relative" href="#">products</a>
+
+                        <!-- Animation rect -->
+                        <div data-menu-contains_rect class="nav_link-rect hovereffect md:hidden lg:block w-11/12 h-0.5 rounded-xl bg-yellow-400 mt-7 opacity-1 absolute z-50 opacity-0"></div>
+
+                        <!-- Menu -->
+                        <article class="nav_link_inner-menu hidden absolute w-full h-auto box-border mt-8 flex flex-col items-center">
+                            <!-- Links -->
+                            <div class="nav_link_inner-menu_links-container flex flex-col items-center z-0 pt-1">
+                                <!-- Drinks -->
+                                <a class="nav_link_inner-menu_link text-white uppercase text-normal transition-color hover:text-yellow-400" href="#">drinks</a>
+
+                                <!-- Pastry -->
+                                <a class="nav_link_inner-menu_link text-white uppercase text-normal mt-2 transition-color hover:text-yellow-400" href="/Public/pages/products_pastry.html">pastry</a>
+                            </div>
+
+                            <!-- Hiding rect -->
+                            <div class="nav_link_inner-menu_link-container_hiding-rect md:hidden lg:block w-full h-full z-10 bg-black absolute"></div>
+                        </article>
+                    </div>
+                </article>
+
+                <!-- Lang buttons -->
+                <article class="nav_lang-buttons_containe md:w-2/12 lg:w-1/12 h-auto hidden md:flex justify-between items-center">
+                    <!-- En -->
+                    <div class="nav_lang-button_container">
+                        <button data-eng class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">eng</button>
+                    </div>
+
+                    <!-- Est -->
+                    <div class="nav_lang-button_container">
+                        <button data-est class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">est</button>
+                    </div>
+
+                    <!-- Rus -->
+                    <div class="nav_lang-button_container">
+                        <button data-rus class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">rus</button>
+                    </div>
+                </article>
+
+                <!-- Burger menu open button -->
+                <button class="nav_burger-menu_open-button flex flex-col items-center w-auto h-auto box-border px-2 py-2 md:hidden">
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 rounded-xl"></div>
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 mt-1 rounded-xl"></div>
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 mt-1 rounded-xl"></div>
+                </button>
+            </nav>
+
+            <!-- Header -->
+            <header class="about-header w-full h-auto">
+                <!-- Content container -->
+                <div class="about-header_content-container w-full md:w-6/12 lg:w-5/12 h-auto flex flex-col items-center mt-16 lg:mt-32 px-4 mx-auto">
+                    <!-- H -->
+                    <div class="about-header_content-container_row w-full h-auto">
+                        <p class="about_h-1 about-header_text_appear-animation text_appear-animation text-yellow-400 text-center text-normal tracking-wider">
+                            Would you like to know more about our team?
+                        </p>
+                    </div>
+
+                    <!-- H 2 -->
+                    <div class="about-header_content-container_row w-full h-auto">
+                        <p class="about_h-2 about-header_text_appear-animation text_appear-animation text-white uppercase tracking-wider text-4xl md:text-6xl lg:text-8xl text-center mt-3">
+                            here we are
+                        </p>
+                    </div>
+
+                    <!-- Rect -->
+                    <div class="about-header_content-container_row w-full h-auto lg:mt-10">
+                        <div class="w-8/12 md:w-10/12 lg:w-6/12 about-header_text_appear-animation text_appear-animation h-1 rounded-xl bg-yellow-400 mx-auto mt-8"></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main content -->
+            <section class="about_main-content w-full h-auto px-4 mt-40 lg:mt-56 pb-20 box-border relative">
+                <!-- Content container -->
+                <div class="about_main-content_container w-full h-auto box-border">
+                    <!-- Kirill -->
+                    <article class="about_main-content_block kirill-desc md:flex md:justify-start md:items-center">
+                        <!-- Img section -->
+                        <div class="about_main-content_img-container w-full md:w-4/12 lg:w-4/12 h-auto flex justify-center items-center relative">
+                                <div class="about_person-img_kirill w-44 h-44 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full"></div>
+                        </div>
+
+                        <!-- Text section -->
+                        <div class="about_main-content_text-container w-full md:w-7/12 h-auto md:pl-8 lg:pl-0 md:pt-4 lg:flex lg:flex-col lg:justify-center">
+                            <!-- Name -->
+                            <div class="about_main-content_text-container_row w-full h-auto relative">
+                                <p class="about_person-name invisible text-yellow-400 font-normal text-center md:text-left mt-10 md:mt-0 uppercase tracking-wider text-2xl lg:text-4xl scale-100">Kirill</p>
+                            </div>
+
+                            <!-- Desc -->
+                            <div class="about_main-content_text-container_row w-full h-auto relative">
+                                <p class="about_person-desc invisible text-white font-normal text-center md:text-left mt-2 text-normal lg:text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia a odio cum culpa eos assumenda!</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Masha -->
+                    <article class="about_main-content_block maria-desc mt-32 md:mt-44 md:flex md:flex-row-reverse md:items-center">
+                        <!-- Img section -->
+                        <div class="about_main-content_img-container w-full md:w-4/12 lg:w-4/12 h-auto flex justify-center items-center relative">
+                            <div class="about_person-img_masha w-44 h-44 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full"></div>
+                        </div>
+
+                        <!-- Text section -->
+                        <div class="about_main-content_text-container w-full md:w-7/12 h-auto md:pr-8 lg:pr-0 md:pt-4 lg:flex lg:flex-col lg:justify-center">
+                            <!-- Name -->
+                            <div class="about_main-content_text-container_row w-full h-auto relative">
+                                <p class="about_person-name invisible text-yellow-400 font-normal text-center md:text-right mt-10 md:mt-0 uppercase tracking-wider text-2xl lg:text-4xl">Maria</p>
+                            </div>
+
+                            <!-- Desc -->
+                            <div class="about_main-content_text-container_row w-full h-auto relative">
+                                <p class="about_person-desc invisible text-white font-normal text-center md:text-right mt-2 text-normal lg:text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia a odio cum culpa eos assumenda!</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- //Main content -->
+
+            <!-- Burger menu -->
+            <section class="burger-menu w-full h-screen absolute inset-0 flex flex-col items-center pt-7 pb-2 px-4 box-border z-50">
+                <!-- Links -->
+                <article class="burger-menu_links-container w-full h-auto py-4 box-border">
+                    <!-- About -->
+                    <div class="burger-menu_link-container w-full h-auto flex justify-center items-center">
+                        <a class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="/Public/pages/about.html">about</a>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="burger-menu_link-container mt-5 w-full h-auto flex justify-center items-center">
+                        <a class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="#">contact</a>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="burger-menu_link-container mt-5 w-full h-auto flex flex-col items-center">
+                        <button data-burger-link_menu class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="#">Products</button>
+
+                        <!-- Hidden menu -->
+                        <div class="burger-menu_link_menu hidden w-full h-auto flex flex-col items-center box-border py-5">
+                            <!-- Drinks -->
+                            <a class="burger-menu_hidden-menu_link uppercase text-white text-lg tracking-wider" href="#">drinks</a>
+
+                            <!-- Pastry -->
+                            <a data-open-pastry-page class="burger-menu_hidden-menu_link uppercase text-white text-lg tracking-wider mt-3">pastry</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Lang buttons -->
+                <article class="burger-menu_lang-buttons_container w-full h-auto flex justify-center items-center absolute bottom-28">
+                    <!-- En -->
+                    <div class="nav_lang-button_container">
+                        <button data-eng class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">eng</button>
+                    </div>
+
+                    <!-- Est -->
+                    <div class="nav_lang-button_container ml-2">
+                        <button data-est class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">est</button>
+                    </div>
+
+                    <!-- Rus -->
+                    <div class="nav_lang-button_container ml-2">
+                        <button data-rus class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">rus</button>
+                    </div>
+                </article>
+
+                <!-- Close button -->
+                <button class="burger-menu_close-button text-white uppercase text-2xl absolute bottom-12 transition-color hover:text-yellow-400">
+                    x
+                </button>
+            </section>
+        </div>
+    </div>
+
+    <!-- Nav script -->
+    <script src="script/about-script/navScript.js"></script>
+
+    <!-- About script -->
+    <script src="script/about-script/aboutScript.js"></script>
+</body>
+</html>

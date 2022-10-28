@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/mainStyle.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper w-full h-auto px-4 md:px-12 lg:px-20">
+        <!-- Content container -->
+        <div class="container mx-auto box-border flex flex-col items-center">
+            <!-- Nav -->
+            <nav class="nav w-full h-auto flex justify-between items-center">
+                <!-- Logo -->
+                <article class="nav_logo-container w-28 h-20 flex justify-center items-center">
+                    <img class="nav_logo" src="images/nav/black-logo.JPG" alt="Logo" />
+                </article>
+
+                <!-- Links -->
+                <article class="nav_links-container md:w-5/12 lg:w-4/12 h-auto hidden md:flex justify-between items-center">
+                    <!-- Contact -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400" href="#">contact</a>
+
+                        <!-- Animation rect -->
+                        <div class="nav_link-rect w-11/12 h-0.5 absolute rounded-xl bg-yellow-400 mt-7 opacity-0"></div>
+                    </div>
+
+                    <!-- About -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400" href="#">about</a>
+
+                        <!-- Animation rect -->
+                        <div class="nav_link-rect w-11/12 h-0.5 absolute rounded-xl bg-yellow-400 mt-7 opacity-0"></div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="nav_link-container relative flex flex-col items-center">
+                        <a data-menu-open_link class="nav_link uppercase text-lg text-white transition-colors hover:text-yellow-400 relative" href="#">products</a>
+
+                        <!-- Animation rect -->
+                        <div data-menu-contains_rect class="nav_link-rect hovereffect md:hidden lg:block w-11/12 h-0.5 rounded-xl bg-yellow-400 mt-7 opacity-1 absolute z-50 opacity-0"></div>
+
+                        <!-- Menu -->
+                        <article class="nav_link_inner-menu hidden absolute w-full h-auto box-border mt-8 flex flex-col items-center">
+                            <!-- Links -->
+                            <div class="nav_link_inner-menu_links-container flex flex-col items-center z-0 pt-1">
+                                <!-- Drinks -->
+                                <a class="nav_link_inner-menu_link text-white uppercase text-normal transition-color hover:text-yellow-400" href="#">drinks</a>
+
+                                <!-- Pastry -->
+                                <a class="nav_link_inner-menu_link text-white uppercase text-normal mt-2 transition-color hover:text-yellow-400" href="#">pastry</a>
+                            </div>
+
+                            <!-- Hiding rect -->
+                            <div class="nav_link_inner-menu_link-container_hiding-rect md:hidden lg:block w-full h-full z-10 bg-black absolute"></div>
+                        </article>
+                    </div>
+                </article>
+
+                <!-- Lang buttons -->
+                <article class="nav_lang-buttons_containe md:w-2/12 lg:w-1/12 h-auto hidden md:flex justify-between items-center">
+                    <!-- En -->
+                    <div class="nav_lang-button_container">
+                        <button data-eng class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">eng</button>
+                    </div>
+
+                    <!-- Est -->
+                    <div class="nav_lang-button_container">
+                        <button data-est class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">est</button>
+                    </div>
+
+                    <!-- Rus -->
+                    <div class="nav_lang-button_container">
+                        <button data-rus class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">rus</button>
+                    </div>
+                </article>
+
+                <!-- Burger menu open button -->
+                <button class="nav_burger-menu_open-button flex flex-col items-center w-auto h-auto box-border px-2 py-2 md:hidden">
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 rounded-xl"></div>
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 mt-1 rounded-xl"></div>
+                    <div class="nav_burger-menu_open-button_rect w-9 h-1 mt-1 rounded-xl"></div>
+                </button>
+            </nav>
+
+            <!-- Burger menu -->
+            <section class="burger-menu w-full h-screen absolute inset-0 flex flex-col items-center pt-7 pb-2 px-4 box-border z-50">
+                <!-- Links -->
+                <article class="burger-menu_links-container w-full h-auto py-4 box-border">
+                    <!-- About -->
+                    <div class="burger-menu_link-container w-full h-auto flex justify-center items-center">
+                        <a class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="#">about</a>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="burger-menu_link-container mt-5 w-full h-auto flex justify-center items-center">
+                        <a class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="#">contact</a>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="burger-menu_link-container mt-5 w-full h-auto flex flex-col items-center">
+                        <a data-burger-link_menu class="burger-menu_link uppercase text-white text-xl tracking-wider transition-color hover:text-yellow-400" href="#">Products</a>
+
+                        <!-- Hidden menu -->
+                        <div class="burger-menu_link_menu hidden w-full h-auto flex flex-col items-center box-border py-5">
+                            <!-- Drinks -->
+                            <a class="burger-menu_hidden-menu_link uppercase text-white text-lg tracking-wider" href="#">drinks</a>
+
+                            <!-- Pastry -->
+                            <a class="burger-menu_hidden-menu_link uppercase text-white text-lg tracking-wider mt-3" href="/Public/pages/products_pastry.html">pastry</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Lang buttons -->
+                <article class="burger-menu_lang-buttons_container w-full h-auto flex justify-center items-center absolute bottom-28">
+                    <!-- En -->
+                    <div class="nav_lang-button_container">
+                        <button data-eng class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">eng</button>
+                    </div>
+
+                    <!-- Est -->
+                    <div class="nav_lang-button_container ml-2">
+                        <button data-est class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">est</button>
+                    </div>
+
+                    <!-- Rus -->
+                    <div class="nav_lang-button_container ml-2">
+                        <button data-rus class="nav_lang-button uppercase text-sm text-white transition-colors hover:text-yellow-400">rus</button>
+                    </div>
+                </article>
+
+                <!-- Close button -->
+                <button class="burger-menu_close-button text-white uppercase text-2xl absolute bottom-12 transition-color hover:text-yellow-400">
+                    x
+                </button>
+            </section>
+
+            <!-- Pastry items list -->
+            <section class="pastry w-full h-auto relative z-10 mt-12 pb-12">
+                <!-- Content container -->
+                <div class="pastry_content-container w-full h-auto flex flex-col items-center pb-6">
+                    <!-- Nuts with apple -->
+                    <article class="pastry_item-container w-11/12 h-auto py-4 px-4 rounded-lg box-border relative overflow-hidden">
+                        <!-- Item header -->
+                        <div class="pastry_item-container_header w-full h-auto flex justify-between items-center">
+                            <!-- Item name -->
+                            <p class="pastry_item-name text-white uppercase">apple nuts</p>
+
+                            <!-- Open btn -->
+                            <button class="pastry_item_desc-open_btn text-white">more</button>
+                        </div>
+
+                        <!-- Desc -->
+                        <div class="pastry_item-container_body w-full h-auto mt-10 hidden">
+                            <!-- Img -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center items-center">
+                                <img class="pastry_item_img w-5/12" src="images/header/nuts_apple.png" alt="Nuts with apple" />
+                            </div>
+
+                            <!-- Desc -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center text-white text-center mt-5">
+                                <p class="pastry_item-desc text-white text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempore nobis exercitationem sit maxime a consequatur
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- To buy btn  -->
+                        <div class="pastry_item-container_footer w-full h-auto mt-5 flex justify-center items-center hidden">
+                            <button data-buy-apple-nuts class="pastry_item-container_button px-6 py-2 flex justify-center items-center text-yellow-400 uppercase">buy</button>
+                        </div>
+                    </article>
+
+                    <!-- Item rect -->
+                    <div class="pastry_item-rect w-full h-1 bg-yellow-400 rounded-lg mt-2 relative opacity-80"></div>
+
+                    <!-- Nuts with bounty -->
+                    <article class="pastry_item-container w-11/12 h-auto py-4 px-4 rounded-lg box-border relative overflow-hidden mt-10">
+                        <!-- Item header -->
+                        <div class="pastry_item-container_header w-full h-auto flex justify-between items-center">
+                            <!-- Item name -->
+                            <p class="pastry_item-name text-white uppercase">bounty nuts</p>
+
+                            <!-- Open btn -->
+                            <button class="pastry_item_desc-open_btn text-white">more</button>
+                        </div>
+
+                        <!-- Desc -->
+                        <div class="pastry_item-container_body w-full h-auto mt-10 hidden">
+                            <!-- Img -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center items-center">
+                                <img class="pastry_item_img w-5/12" src="images/header/nuts_bounty.png" alt="Nuts with apple" />
+                            </div>
+
+                            <!-- Desc -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center text-white text-center mt-5">
+                                <p class="pastry_item-desc text-white text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempore nobis exercitationem sit maxime a consequatur
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- To buy btn  -->
+                        <div class="pastry_item-container_footer w-full h-auto mt-5 flex justify-center items-center hidden">
+                            <button data-buy-bounty-nuts class="pastry_item-container_button px-6 py-2 flex justify-center items-center text-yellow-400 uppercase">buy</button>
+                        </div>
+                    </article>
+
+                    <!-- Item rect -->
+                    <div class="pastry_item-rect w-full h-1 bg-yellow-400 rounded-lg mt-2 opacity-80"></div>
+
+                    <!-- Nuts with choc -->
+                    <article class="pastry_item-container w-11/12 h-auto py-4 px-4 rounded-lg box-border relative overflow-hidden mt-10">
+                        <!-- Item header -->
+                        <div class="pastry_item-container_header w-full h-auto flex justify-between items-center">
+                            <!-- Item name -->
+                            <p class="pastry_item-name text-white uppercase">choclate nuts</p>
+
+                            <!-- Open btn -->
+                            <button class="pastry_item_desc-open_btn text-white">more</button>
+                        </div>
+
+                        <!-- Desc -->
+                        <div class="pastry_item-container_body w-full h-auto mt-10 hidden">
+                            <!-- Img -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center items-center">
+                                <img class="pastry_item_img w-5/12" src="images/header/nuts_choc.png" alt="Nuts with apple" />
+                            </div>
+
+                            <!-- Desc -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center text-white text-center mt-5">
+                                <p class="pastry_item-desc text-white text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempore nobis exercitationem sit maxime a consequatur
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- To buy btn  -->
+                        <div class="pastry_item-container_footer w-full h-auto mt-5 flex justify-center items-center hidden">
+                            <button data-buy-choc-nuts class="pastry_item-container_button px-6 py-2 flex justify-center items-center text-yellow-400 uppercase">buy</button>
+                        </div>
+                    </article>
+
+                    <!-- Item rect -->
+                    <div class="pastry_item-rect w-full h-1 bg-yellow-400 rounded-lg mt-2 opacity-80"></div>
+
+                    <!-- Nuts with twix -->
+                    <article class="pastry_item-container w-11/12 h-auto py-4 px-4 rounded-lg box-border relative overflow-hidden mt-10">
+                        <!-- Item header -->
+                        <div class="pastry_item-container_header w-full h-auto flex justify-between items-center">
+                            <!-- Item name -->
+                            <p class="pastry_item-name text-white uppercase">twix nuts</p>
+
+                            <!-- Open btn -->
+                            <button class="pastry_item_desc-open_btn text-white">more</button>
+                        </div>
+
+                        <!-- Desc -->
+                        <div class="pastry_item-container_body w-full h-auto mt-10 hidden">
+                            <!-- Img -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center items-center">
+                                <img class="pastry_item_img w-5/12" src="images/header/nuts_twix.png" alt="Nuts with apple" />
+                            </div>
+
+                            <!-- Desc -->
+                            <div class="pastry_item-container_body_row w-full h-auto flex justify-center text-white text-center mt-5">
+                                <p class="pastry_item-desc text-white text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempore nobis exercitationem sit maxime a consequatur
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- To buy btn  -->
+                        <div class="pastry_item-container_footer w-full h-auto mt-5 flex justify-center items-center hidden">
+                            <button data-buy-twix-nuts class="pastry_item-container_button px-6 py-2 flex justify-center items-center text-yellow-400 uppercase">buy</button>
+                        </div>
+                    </article>
+
+                    <!-- Item rect -->
+                    <div class="pastry_item-rect w-full h-1 bg-yellow-400 rounded-lg mt-2 opacity-80"></div>
+            </section>
+
+            <!-- Item buy window -->
+            <section class="pastry_item_buy_window w-full h-screen absolute bg-black inset-0 z-30 flex flex-col items-center py-10 px-4">
+                <!-- Img -->
+                <article data-pastry_buy-window_img class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center">
+                    <img class="pastry_item_buy-window_img w-5/12" src="" />
+                </article>
+
+                <!-- Name -->
+                <article class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center">
+                    <p class="pastry_item_buy-window_name text-yellow-400 font-normal text-xl tracking-wider uppercase mt-5"></p>
+                </article>
+
+                <!-- Description -->
+                <article class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center mt-5">
+                    <p class="pastry_item_buy-window_desc text-white font-normal text-normal text-center"></p>
+                </article>
+
+                <!-- Label -->
+                <p class="pastry_item_buy-window_label text-gray-400 mt-5">select a size:</p>
+
+                <!-- Size -->
+                <article class="pastry_item_buy-window_row w-full h-auto flex flex-col justify-center items-center mt-2">
+                    <!-- S -->
+                    <button data-pastry_item-size_s class="pastry_item_size-button text-white text-sm border-2 rounded-lg py-1 px-2 uppercase">Small nuts</button>
+
+                    <!-- L -->
+                    <button data-pastry_item-size_l class="pastry_item_size-button text-white text-sm border-2 rounded-lg py-1 px-2 uppercase mt-5">Large nuts</button>
+                </article>
+
+                <!-- Label -->
+                <p class="pastry_item_buy-window_label text-gray-400 mt-5">select amount:</p>
+
+                <!-- Quantity -->
+                <article class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center mt-2">
+                    <button data-quantity-5 class="pastry_item_quantity-button border-2 rounded-lg py-1 px-2 text-sm text-white mr-4">5</button>
+
+                    <button data-quantity-9 class="pastry_item_quantity-button border-2 rounded-lg py-1 px-2 text-sm text-white">9</button>
+
+                    <button data-quantity-12 class="pastry_item_quantity-button border-2 rounded-lg py-1 px-2 text-sm text-white ml-4">12</button>
+                </article>
+
+                <article class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center mt-3">
+                    <button data-quantity-35 class="pastry_item_quantity-button border-2 rounded-lg py-1 px-2 text-sm text-white mr-4">35</button>
+
+                    <button data-quantity-50 class="pastry_item_quantity-button border-2 rounded-lg py-1 px-2 text-sm text-white">50</button>
+
+                    <button data-quantity-80 class="pastry_item_quantity-button border-2 rounded-lg py-1 px-2 text-sm text-white ml-4">80</button>
+                </article>
+
+                <!-- Price -->
+                <article class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center mt-10">
+                    <p class="pastry_item_buy-window_price text-lg text-yellow-400"></p>
+                </article>
+
+                <!-- Confirm -->
+                <article class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center mt-5">
+                    <button data-confirm-button class="pastry_item_buy-window_confirm-button text-yellow-400 border-2 border-yellow-400 rounded-lg px-4 py-2 uppercase">confirm</button>
+                </article>
+
+                <!-- Back button -->
+                <article class="pastry_item_buy-window_row w-full h-auto flex justify-center items-center mt-5">
+                    <button data-back-button class="pastry_item_buy-window_back-button text-white border-2 rounded-lg px-4 py-2 uppercase opacity-80">Back</button>
+                </article>
+
+                <!-- Size select modal window -->
+                <section class="choose-size_modal-window w-10/12 h-auto py-2 px-3 flex justify-center items-center rounded-xl border-2 border-white mx-auto box-border absolute bg-black z-50">
+                    <p class="choose-size_modal-window_text font-normal text-normal text-white">You must choose a size first</p>
+                </section>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Nav script -->
+    <script src="script/item-script/navScript.js"></script>
+
+    <!-- Item script -->
+    <script src="script/item-script/itemScript.js"></script>
+</body>
+</html>
